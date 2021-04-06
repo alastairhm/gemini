@@ -1,0 +1,13 @@
+version: '2.1'
+services:
+ gemini:
+   image: adrianhesketh/gemini:latest
+   ports:
+     - 1965:1965
+   environment:
+     - PORT=1965
+     - DOMAIN
+   volumes:
+     - ./certs:/certs
+     - ./content:/content
+
